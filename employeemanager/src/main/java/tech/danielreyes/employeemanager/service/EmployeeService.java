@@ -2,6 +2,7 @@ package tech.danielreyes.employeemanager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tech.danielreyes.employeemanager.exception.UserNotFoundException;
 import tech.danielreyes.employeemanager.model.Employee;
 import tech.danielreyes.employeemanager.repo.EmployeeRepo;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
     private final EmployeeRepo employeeRepo;
 
